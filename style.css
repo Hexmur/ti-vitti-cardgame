@@ -1,0 +1,35 @@
+body{
+  font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: stretch;
+  overflow: hidden;
+
+  margin: 0;
+  height: 100vh;
+}
+
+.header {
+  background-color: rgb(6, 57, 6);
+  text-align: center;
+  height: 55px;
+  align-content: center;
+
+  font-size: 30px;
+}
+
+.content {
+  background-color: green;
+  flex: auto;
+}
+
+.footer {
+  background-color:aliceblue;
+  text-align: center;
+  height: 27px;
+  color: black;
+  align-content: center;
+}
