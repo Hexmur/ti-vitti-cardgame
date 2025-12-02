@@ -11,6 +11,27 @@ class Card{
   }
 }
 
+function shuffleCards(cardsArray){
+  let randomIndex = 0;
+  let currentIndex = cardsArray.length;
+
+  while(currentIndex != 0){
+    let randomIndex = Math.floor(Math.random()*currentIndex);
+    currentIndex--;
+    [cardsArray[currentIndex], cardsArray[randomIndex]] =
+    [cardsArray[randomIndex], cardsArray[currentIndex]];
+  }
+}
+
+function distributeCards(cardsArray, playerDeck, comDeck){
+  for(i=0; i<cardsArray.length; i++){
+    //console.log(i);
+    playerDeck.push(cardsArray[i]);
+    i++;
+    comDeck.push(cardsArray[i]);
+  }
+}
+
 let cardsArray = [];
 suitArray = ["oro", "spade", "mazze", "coppe"];
 tmpSuit = suitArray[0];
@@ -32,8 +53,16 @@ for(i=0; i<4; i++){
 
 }
 
+shuffleCards(cardsArray);
+
+let playerDeck = [];
+let comDeck = [];
+distributeCards(cardsArray, playerDeck, comDeck);
+//printPlayerDeck();
+
 console.log(cardsArray.length);
 
-for(i=0; i<cardsArray.length; i++){
-  cardsArray[i].printCardValues();
+for(i=0; i<playerDeck.length; i++){
+  playerDeck[i].printCardValues();
+  comDeck[i].printCardValues();
 }
