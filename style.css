@@ -54,3 +54,11 @@ body{
   color: black;
   align-content: center;
 }
+
+#playDiv {
+  width: 500px;
+  height: 500px;
+  border: solid black;
+  align-self: center;
+  background-color: azure;
+}

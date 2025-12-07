@@ -66,3 +66,13 @@ for(i=0; i<playerDeck.length; i++){
   playerDeck[i].printCardValues();
   comDeck[i].printCardValues();
 }
+
+const container = document.getElementById("container");
+const startBtn = document.getElementById("startBtn");
+let playDiv;
+
+startBtn.addEventListener("click", () => {
+  playDiv = document.createElement("div");
+  playDiv.id = "playDiv";
+  container.appendChild(playDiv);
+});
